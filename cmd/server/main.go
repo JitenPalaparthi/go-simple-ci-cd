@@ -22,7 +22,7 @@ func routes() http.Handler {
 	mux.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
 		w.Header().Set("Content-Type", "text/plain; charset=utf-8")
 		w.WriteHeader(http.StatusOK)
-		_, _ = w.Write([]byte("Hello from Go! Try GET /health\n"))
+		_, _ = w.Write([]byte("Hello from Go! Try GET /health, you get health end point with status code\n"))
 	})
 
 	mux.HandleFunc("/health", func(w http.ResponseWriter, r *http.Request) {
